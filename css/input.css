@@ -27,3 +27,9 @@
     line-height: var(--tw-leading, var(--text-8xl--line-height) /* 1 */);
   }
 }
+
+/* cards effect */
+
+.swiper-slide-active .card-overlay {
+  opacity: 1;
+}
