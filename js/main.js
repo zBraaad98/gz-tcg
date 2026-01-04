@@ -74,6 +74,10 @@ const swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination", // points to the div OUTSIDE the swiper
     clickable: true,
   },
+  autoplay: {
+    delay: 4000,
+    pauseOnMouseEnter: true,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
