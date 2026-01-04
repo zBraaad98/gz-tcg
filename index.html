@@ -22,6 +22,7 @@
   <body class="font-inter">
     <!-- Header navigation menu -->
     <nav
+      id="homeNav"
       class="relative z-50 p-3 md:mb-20 md:px-20 shadow md:flex md:items-center md:justify-between"
     >
       <div class="flex justify-between items-center">
@@ -46,26 +47,26 @@
         class="md:flex md:items-center absolute md:static top-17 left-0 w-full bg-white md:w-auto md:bg-transparent -translate-x-full md:translate-x-0 opacity-0 md:opacity-100 transition-all duration-500 ease-in-out md:transition-none pre-hidden"
       >
         <li class="mx-4 my-6 md:my-0">
-          <a href="#" class="text-xl font-medium duration-300 hover:text-hover">
+          <a
+            href="/index.html"
+            class="text-xl font-medium duration-300 hover:text-hover"
+          >
             Home
           </a>
         </li>
 
         <li class="mx-4 my-6 md:my-0">
-          <a href="#" class="text-xl font-medium duration-300 hover:text-hover">
+          <a
+            href="/about.html"
+            class="text-xl font-medium duration-300 hover:text-hover"
+          >
             About
           </a>
         </li>
 
         <li class="mx-4 my-6 md:my-0">
           <a href="#" class="text-xl font-medium duration-300 hover:text-hover">
-            Buy
-          </a>
-        </li>
-
-        <li class="mx-4 my-6 md:my-0">
-          <a href="#" class="text-xl font-medium duration-300 hover:text-hover">
-            FAQ
+            Where to buy
           </a>
         </li>
 
@@ -362,11 +363,10 @@
         <div class="hidden md:block md:col-span-2"></div>
         <div class="site-map col-span-1 md:col-span-3 text-xl/loose">
           <h1 class="text-3xl mb-5">Site map</h1>
-          <p>Home</p>
-          <p>About</p>
-          <p>Buy</p>
-          <p>FAQ</p>
-          <p>Contact</p>
+          <a href=""><p>Home</p></a>
+          <a href="/about.html"><p>About</p></a>
+          <a href=""><p>Where to buy</p></a>
+          <a href=""><p>Contact</p></a>
         </div>
         <div class="legal col-span-1 md:col-span-3 text-xl/loose">
           <h1 class="text-3xl mb-5">Legal</h1>

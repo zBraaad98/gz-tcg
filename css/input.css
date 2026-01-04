@@ -17,7 +17,7 @@
     margin-bottom: calc(var(--spacing) * 5) /* 1.25rem = 20px */;
   }
 
-  nav {
+  #homeNav {
     margin-bottom: 2rem;
   }
 

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About GZ-TCG</title>
+    <link href="/css/tailwind.css" rel="stylesheet" />
+  </head>
+
+  <body class="font-inter">
+    <!-- Header navigation menu -->
+    <nav
+      class="relative z-50 p-3 md:px-20 shadow md:flex md:items-center md:justify-between"
+    >
+      <div class="flex justify-between items-center">
+        <!-- Logo text -->
+        <a href=""
+          ><span
+            class="text-3xl font-space-grotesk font-semibold cursor-pointer"
+          >
+            GZ-TCG
+          </span></a
+        >
+
+        <!-- Mobile menu icon -->
+        <span class="text-4xl mx-2 cursor-pointer md:hidden block">
+          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+
+      <!-- Navigation menu -->
+      <ul
+        id="navMenu"
+        class="md:flex md:items-center absolute md:static top-17 left-0 w-full bg-white md:w-auto md:bg-transparent -translate-x-full md:translate-x-0 opacity-0 md:opacity-100 transition-all duration-500 ease-in-out md:transition-none pre-hidden"
+      >
+        <li class="mx-4 my-6 md:my-0">
+          <a
+            href="/index.html"
+            class="text-xl font-medium duration-300 hover:text-hover"
+          >
+            Home
+          </a>
+        </li>
+
+        <li class="mx-4 my-6 md:my-0">
+          <a
+            href="/about.html"
+            class="text-xl font-medium duration-300 hover:text-hover"
+          >
+            About
+          </a>
+        </li>
+
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl font-medium duration-300 hover:text-hover">
+            Where to buy
+          </a>
+        </li>
+
+        <!-- Contact button -->
+        <li class="mx-4 my-6 md:my-0">
+          <button
+            class="bg-accent py-2 px-4 md:py-1 md:px-3 text-white text-xl rounded hover:bg-hover duration-300 cursor-pointer"
+          >
+            Contact
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-accent text-slate-100">
+      <section class="py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+          <h2 class="text-4xl font-bold tracking-tight">About GZ-TCG</h2>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <main class="pb-24">
+        <div class="max-w-4xl mx-auto px-6 space-y-20">
+          <!-- About -->
+          <section class="space-y-6 text-slate-300 leading-relaxed">
+            <p>
+              GZ-TCG is a UK-based sole trader business specialising in the
+              sourcing, grading, and sale of high-quality trading card singles.
+              We focus on collectible cards that demonstrate strong condition
+              and long-term demand, with an emphasis on professional third-party
+              grading.
+            </p>
+
+            <p>
+              All graded cards available through GZ-TCG are professionally
+              authenticated and encapsulated by recognised independent grading
+              companies, including PSA, Beckett (BGS), ACE Grading, and CGC.
+              GZ-TCG does not perform grading itself; grading reports and grades
+              are issued by the relevant grading partner.
+            </p>
+
+            <p>
+              Our graded cards are securely shipped and sold through trusted
+              online platforms, with transparent photos, accurate condition
+              descriptions, and established seller credentials.
+            </p>
+          </section>
+
+          <!-- Our Approach -->
+          <section>
+            <h3 class="text-2xl font-semibold mb-6">Our Approach</h3>
+
+            <ul class="space-y-3 text-slate-300">
+              <li>
+                Selected based on condition, rarity, and grading potential
+              </li>
+              <li>Submitted to trusted third-party graders</li>
+              <li>Listed with clear, honest descriptions</li>
+              <li>Shipped securely with tracking and protection</li>
+            </ul>
+          </section>
+
+          <!-- Why GZ-TCG -->
+          <section>
+            <h3 class="text-2xl font-semibold mb-6">Why GZ-TCG</h3>
+
+            <p class="text-slate-300 leading-relaxed">
+              With established positive feedback from online selling platforms,
+              we aim to deliver a professional and trustworthy experience for
+              buyers looking for graded trading cards. Whether you are a
+              collector or reseller, our listings reflect careful selection and
+              accurate presentation.
+            </p>
+          </section>
+        </div>
+      </main>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-accent py-8">
+      <div class="max-w-6xl mx-auto px-6 text-center text-slate-100 text-sm">
+        © GZ-TCG. All rights reserved.
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
