@@ -36,7 +36,6 @@ window.addEventListener("resize", initMenu);
 
 const track = document.querySelector(".ticker-track");
 
-// Duplicate content once in JS
 track.innerHTML += track.innerHTML;
 
 function startTicker() {
@@ -87,4 +86,43 @@ const swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
     },
   },
+});
+
+// GSAP for hero
+gsap.from(".hero-text > *", {
+  opacity: 0,
+  y: 24,
+  duration: 1,
+  stagger: 0.12,
+  ease: "power3.out",
+});
+
+gsap.from(".hero-card", {
+  opacity: 0,
+  y: 40,
+  duration: 1.2,
+  ease: "power3.out",
+  delay: 0.2,
+});
+
+gsap.from(".hero-cta", {
+  opacity: 0,
+  duration: 0.6,
+  ease: "power2.out",
+  delay: 0.6,
+});
+
+// fade in sections
+gsap.utils.toArray(".fade-in").forEach((section) => {
+  gsap.from(section, {
+    scrollTrigger: {
+      trigger: section,
+      start: "top 80%",
+      once: true,
+    },
+    opacity: 0,
+    y: 20,
+    duration: 0.8,
+    ease: "power2.out",
+  });
 });
