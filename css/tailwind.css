@@ -37,8 +37,6 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
-    --text-7xl: 4.5rem;
-    --text-7xl--line-height: 1;
     --text-8xl: 6rem;
     --text-8xl--line-height: 1;
     --text-9xl: 8rem;
@@ -59,7 +57,6 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --font-space-grotesk: "Space Grotesk", sans-serif;
     --font-inter: "Inter", sans-serif;
     --font-inter-tight: "Inter Tight", sans-serif;
     --color-accent: #111924;
@@ -215,9 +212,6 @@
   }
 }
 @layer utilities {
-  .visible {
-    visibility: visible;
-  }
   .absolute {
     position: absolute;
   }
