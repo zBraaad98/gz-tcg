@@ -1,30 +1,3 @@
-function Menu(e) {
-  const list = document.querySelector("ul");
-  const isClosed = e.name === "menu";
-  e.name = isClosed ? "close-outline" : "menu";
-  list.classList.toggle("-translate-x-full", !isClosed);
-  list.classList.toggle("translate-x-0", isClosed);
-  list.classList.toggle("opacity-100", isClosed);
-}
-
-function initMenu() {
-  const list = document.querySelector("ul");
-  const icon = document.querySelector("ion-icon");
-
-  if (window.innerWidth >= 768) {
-    list.classList.remove("-translate-x-full", "opacity-0");
-    list.classList.add("translate-x-0", "opacity-100");
-    icon.name = "menu";
-  } else {
-    list.classList.add("-translate-x-full", "opacity-0");
-    list.classList.remove("translate-x-0", "opacity-100");
-    icon.name = "menu";
-  }
-}
-
-window.addEventListener("DOMContentLoaded", initMenu);
-window.addEventListener("resize", initMenu);
-
 /* TICKER */
 const track = document.querySelector(".ticker-track");
 track.innerHTML += track.innerHTML;
@@ -89,6 +62,8 @@ const swiperWrapper = document.getElementById("cards-wrapper");
 
 async function loadCardsFromSheet() {
   try {
+    const MAX_HOMEPAGE_CARDS = 6; // Limit number of cards on homepage
+
     const res = await fetch(sheetURL);
     const csvText = await res.text();
 
@@ -98,8 +73,8 @@ async function loadCardsFromSheet() {
       .split("\n")
       .map((row) => row.split(","));
 
-    // starting from the second row (index 1)
-    rows.slice(1).forEach((row) => {
+    // Skip header row and limit to MAX_HOMEPAGE_CARDS
+    rows.slice(1, MAX_HOMEPAGE_CARDS + 1).forEach((row) => {
       const title = row[0] || ""; // Card title
 
       // Get the image URL directly from Cloudinary and apply resizing (w_600,h_800)
