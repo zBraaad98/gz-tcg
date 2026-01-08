@@ -61,7 +61,7 @@ function render() {
     div.innerHTML = `
       <img src="${image}" alt="${card.title}" class="w-full h-64 object-cover">
       <div class="p-4">
-        <h3 class="text-lg font-semibold mb-1">${card.title}</h3>
+        <h3 class="text-lg font-semibold mb-1 md:min-h-[3.5rem]">${card.title}</h3>
         <div class="flex justify-between mb-2">
           <span class="bg-gray-200 px-2 py-0.5 rounded">${card.grade}</span>
           <span class="font-bold">£${card.price}</span>
