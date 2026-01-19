@@ -70,22 +70,45 @@
       </ul>
     </nav>
 
-    <main class="p-6">
-      <div class="max-w-6xl mx-auto sm:px-6 mb-6">
-        <input
-          id="searchInput"
-          type="text"
-          placeholder="Search cards..."
-          class="w-full p-3 border rounded focus:outline-none focus:ring"
-        />
-      </div>
-      <div
-        id="catalog-grid"
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
-      >
-        <!-- Cards will be rendered here -->
+    <main class="py-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Page header -->
+        <header class="mb-8">
+          <h1 class="text-3xl font-bold tracking-tight text-gray-900">
+            Card Catalog
+          </h1>
+          <p class="mt-2 text-gray-500">
+            Browse graded cards currently available.
+          </p>
+        </header>
+
+        <!-- Search -->
+        <div class="mb-8 max-w-xl">
+          <div class="relative">
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="Search by name, set, or grade…"
+              class="w-full rounded-lg border border-gray-300 py-3 pl-4 pr-10 text-sm focus:border-accent focus:ring-accent"
+            />
+            <span
+              class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+            >
+              <ion-icon name="search-outline"></ion-icon>
+            </span>
+          </div>
+        </div>
+
+        <!-- Catalog grid -->
+        <div
+          id="catalog-grid"
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8"
+        >
+          <!-- Cards injected here -->
+        </div>
       </div>
     </main>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

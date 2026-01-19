@@ -9,9 +9,8 @@ let currentPage = 1;
 let allCards = [];
 let filteredCards = [];
 
-// -----------------------------
 // Fetch & prepare data
-// -----------------------------
+
 async function loadCatalog() {
   try {
     const res = await fetch(sheetURL);
@@ -37,7 +36,7 @@ async function loadCatalog() {
   }
 }
 
-// Render logic
+// Render cards
 
 function render() {
   grid.innerHTML = "";
@@ -56,18 +55,34 @@ function render() {
 
     const div = document.createElement("div");
     div.className =
-      "bg-white rounded shadow overflow-hidden hover:shadow-lg transition";
+      "bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition flex flex-col";
 
     div.innerHTML = `
-      <img src="${image}" alt="${card.title}" class="w-full h-64 object-cover">
-      <div class="p-4">
-        <h3 class="text-lg font-semibold mb-1 md:min-h-[3.5rem]">${card.title}</h3>
-        <div class="flex justify-between mb-2">
-          <span class="bg-gray-200 px-2 py-0.5 rounded">${card.grade}</span>
-          <span class="font-bold">£${card.price}</span>
+      <img
+        src="${image}"
+        alt="${card.title}"
+        class="w-full h-72 object-cover bg-gray-100"
+      />
+
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="text-sm font-semibold mb-2 line-clamp-2">
+          ${card.title}
+        </h3>
+
+        <div class="flex items-center justify-between mb-4 text-sm">
+          <span class="bg-gray-100 px-2 py-0.5 rounded text-gray-700">
+            ${card.grade}
+          </span>
+          <span class="font-semibold text-gray-900">
+            £${card.price}
+          </span>
         </div>
-        <a href="${card.link}" target="_blank"
-           class="block text-center bg-hover hover:bg-[#354c64] text-white py-2 rounded transition">
+
+        <a
+          href="${card.link}"
+          target="_blank"
+          class="mt-auto block text-center bg-accent text-white py-2 rounded-md hover:bg-hover transition text-sm font-medium"
+        >
           View on eBay
         </a>
       </div>
@@ -87,7 +102,7 @@ function renderPagination() {
   if (!pagination) {
     pagination = document.createElement("div");
     pagination.id = "pagination";
-    pagination.className = "flex justify-center gap-2 mt-8";
+    pagination.className = "flex justify-center gap-2 mt-10";
     grid.after(pagination);
   }
 
@@ -98,11 +113,14 @@ function renderPagination() {
   for (let i = 1; i <= totalPages; i++) {
     const btn = document.createElement("button");
     btn.textContent = i;
-    btn.className = `px-3 py-1 rounded ${
-      i === currentPage
-        ? "bg-accent text-white"
-        : "bg-gray-200 hover:bg-gray-300"
-    }`;
+    btn.className = `
+      px-3 py-1 rounded text-sm
+      ${
+        i === currentPage
+          ? "bg-accent text-white"
+          : "bg-gray-200 hover:bg-gray-300"
+      }
+    `;
 
     btn.onclick = () => {
       currentPage = i;
@@ -127,5 +145,4 @@ searchInput.addEventListener("input", (e) => {
   render();
 });
 
-// Init
 loadCatalog();
